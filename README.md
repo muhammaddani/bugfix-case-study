@@ -1,5 +1,9 @@
 # Bugfix Case Study
 
+[![CI](https://github.com/muhammaddani/bugfix-case-study/actions/workflows/ci.yml/badge.svg)](https://github.com/muhammaddani/bugfix-case-study/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
+
 Studi kasus perbaikan bug pada sebuah modul Python kecil bernama `inventory`.
 
 Repo ini menunjukkan **proses debugging yang nyata**: kode awal sengaja
@@ -17,9 +21,14 @@ tanpa merusak perilaku yang sudah benar.
 ```
 bugfix-case-study/
 ├── inventory.py            # modul yang diperbaiki (versi akhir)
+├── inventory_buggy.py      # versi awal yang sengaja buggy
 ├── tests/
-│   └── test_inventory.py   # test otomatis
+│   ├── test_inventory.py           # 15 test (lulus)
+│   └── test_buggy_demonstration.py # 4 test bug (xfail)
+├── .github/workflows/
+│   └── ci.yml              # CI: jalankan test di setiap push
 ├── BUGS.md                 # catatan tiap bug: gejala, akar masalah, perbaikan
+├── pytest.ini
 ├── requirements.txt
 ├── LICENSE
 └── README.md
