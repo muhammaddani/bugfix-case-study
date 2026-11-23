@@ -10,6 +10,10 @@ Repo ini menunjukkan **proses debugging yang nyata**: kode awal sengaja
 mengandung bug, disertai test yang gagal. Setiap bug dianalisis, diperbaiki,
 lalu dibuktikan lulus test.
 
+## Pratinjau
+
+![Hasil test bugfix-case-study](assets/preview.png)
+
 ## Catatan jujur
 
 Ini adalah **studi kasus latihan**, bukan pekerjaan klien. Tujuannya untuk

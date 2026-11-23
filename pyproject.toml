@@ -12,7 +12,7 @@ description = "Studi kasus debugging: menemukan dan memperbaiki 4 bug pada modul
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-authors = [{ name = "muhammaddani" }]
+authors = [{ name = "Muhammad Dani Noar" }]
 keywords = ["python", "debugging", "bugfix", "testing", "pytest", "case-study"]
 classifiers = [
     "Programming Language :: Python :: 3",
