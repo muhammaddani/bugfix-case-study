@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["inventory", "inventory_buggy"]
+
+[project]
+name = "bugfix-case-study"
+version = "1.0.0"
+description = "Studi kasus debugging: menemukan dan memperbaiki 4 bug pada modul inventory Python."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "muhammaddani" }]
+keywords = ["python", "debugging", "bugfix", "testing", "pytest", "case-study"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7.0.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+xfail_strict = true

@@ -28,11 +28,31 @@ bugfix-case-study/
 ├── .github/workflows/
 │   └── ci.yml              # CI: jalankan test di setiap push
 ├── BUGS.md                 # catatan tiap bug: gejala, akar masalah, perbaikan
+├── CHANGELOG.md            # riwayat perubahan
+├── CONTRIBUTING.md         # panduan kontribusi
+├── Makefile                # perintah umum (test, clean)
+├── justfile                # alternatif jika memakai `just`
+├── tasks.py                # tugas lintas-platform (tanpa make)
+├── pyproject.toml          # metadata paket + konfigurasi pytest
 ├── pytest.ini
 ├── requirements.txt
 ├── LICENSE
 └── README.md
 ```
+
+## Perintah umum
+
+Cara paling mudah (lintas-platform, tanpa `make`):
+
+```bash
+python tasks.py            # daftar semua tugas
+python tasks.py install    # pasang dependensi
+python tasks.py test       # jalankan semua test
+python tasks.py test-buggy # tunjukkan bug pada kode awal (xfail)
+python tasks.py clean      # hapus cache
+```
+
+Tersedia juga `Makefile` (Linux/macOS) dan `justfile` (jika memakai `just`).
 
 ## Cara menjalankan test
 
